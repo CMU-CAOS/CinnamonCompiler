@@ -5707,7 +5707,8 @@ class CinnamonCompiler {
     } break;
     case Op::BootstrapModRaise: {
       uint16_t raise_to_level =
-          levels - term->get<ModRaiseLevelAttribute>(); // change to max levels
+          // levels - term->get<ModRaiseLevelAttribute>(); // change to max levels
+          term->get<ModRaiseLevelAttribute>(); // change to max levels
       bootstrap_mod_raise(output, args[0], raise_to_level, true);
     } break;
     case Op::Receive: {
